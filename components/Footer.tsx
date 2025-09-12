@@ -101,7 +101,7 @@ const Footer: React.FC<FooterProps> = ({ locale }) => {
         </div>
         <div className="flex justify-center relative top-10">
           <Image
-            src="./Drive Electric.png"
+            src="/driveElectric.png"
             alt="Wave"
             width={3000}
             height={500}
