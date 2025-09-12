@@ -33,7 +33,7 @@ const Hero: React.FC<HeroProps> = ({ locale }) => {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
             {t.hero.headline}
           </h1>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-red-500 leading-tight">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-[#AF8D2C] via-[#F4EF89] to-[#EDC967] text-transparent bg-clip-text leading-tight">
             {t.hero.headlines}
           </h2>
           <p className="text-lg md:text-xl mb-8 text-gray-300 max-w-lg leading-relaxed">
@@ -43,17 +43,6 @@ const Hero: React.FC<HeroProps> = ({ locale }) => {
           <Link href={`/${locale}/drivers`}>
               <Button text={t.nav.driveNow} variant="primary" />
             </Link>
-            {/* <Link href={`/${locale}/drivers`}>
-              <button className="bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors">
-                {t.hero.driveNow}
-              </button>
-            </Link> */}
-            <button 
-              className="border-2 border-gray-500 text-white hover:bg-white hover:text-black font-medium px-8 py-3 rounded-lg transition-colors"
-              onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              {t.hero.howItWorks}
-            </button>
           </div>
         </div>
       </div>

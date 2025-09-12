@@ -73,8 +73,8 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
       <div className="container mx-auto relative z-10 px-3 lg:px-0">
         <div className="flex justify-between items-center py-4">
           <Link href={`/${locale}`} className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-            <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
-              <Zap className="w-5 h-5 text-white" />
+            <div className="w-8 h-8 bg-gradient-to-r from-[#F9F295] via-[#E0AA3E] to-[#BB8A44] rounded-full flex items-center justify-center">
+              <Zap className="w-5 h-5 text-black" />
             </div>
             <span className={`text-xl font-bold transition-colors ${getTextColor()}`}>
               GoElectricLove
@@ -86,7 +86,7 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`font-medium transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-red-600 hover:after:w-full after:transition-all after:duration-300 group-hover:after:left-0 ${getTextColor()}`}
+                className={`font-medium transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-gradient-to-r from-[#F9F295] via-[#E0AA3E] to-[#BB8A44] hover:after:w-full after:transition-all after:duration-300 group-hover:after:left-0 ${getTextColor()}`}
               >
                 {link.label}
               </Link>

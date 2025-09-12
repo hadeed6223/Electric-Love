@@ -14,8 +14,8 @@ export const translations = {
       driveNow: 'Drive Now' 
     },
     hero: {
-      headline: 'Drive Electric.',
-      headlines: 'Reliable Earnings',
+      headline: 'Drive Electric',
+      headlines: 'Earn More',
       subheadline: 'Turn every mile with GoElectricLove fast onboarding, flexible driving, and the freedom to grow on your terms.',
       driveNow: 'Drive Now',
       howItWorks: 'How it Works',
@@ -147,7 +147,7 @@ export const translations = {
     },
     hero: {
       headline: 'Conduce Eléctrico. Gana Más.',
-      headlines: 'Ganancias Confiables',
+      headlines: 'Gana Más',
       subheadline: 'Únete a nuestra flota de conductores Tesla y gana dinero mientras reduces tu huella de carbono. Incorporación rápida, cumplimiento gestionado, operaciones eficientes.',
       driveNow: 'Conducir Ahora',
       howItWorks: 'Cómo Funciona',

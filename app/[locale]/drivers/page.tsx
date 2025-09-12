@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import Link from 'next/link';
-import { Brain, Shield, CreditCard, Zap, CheckCircle, DollarSign } from 'lucide-react';
+import { Brain, Shield, CreditCard, Zap, CheckCircle, DollarSign, ArrowRight, Star, Users, Award } from 'lucide-react';
 import Button from '@/components/Button';
 import { Locale, getTranslation } from '@/lib/i18n';
 
@@ -59,42 +59,36 @@ export default function DriversPage({ params: { locale } }: DriversPageProps) {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative min-h-screen text-white flex items-center overflow-hidden">
+      {/* Hero Section - Same as Homepage */}
+      <section className="relative min-h-screen text-white flex items-center overflow-hidden bg-black">
         {/* Background Image */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center object-cover bg-no-repeat opacity-80" 
           style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop)'
+            backgroundImage: 'url(./BG Driver.png)',
+            backgroundPosition: 'left center',
+            backgroundSize: '100% 100%',
           }}
         ></div>
         
-        {/* Overlay */}
-        <div className="absolute inset-0 gradient-hero"></div>
-        
-        {/* Decorative Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-red-500/30 rounded-full blur-xl animate-bounce-subtle"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-red-500/30 rounded-full blur-xl animate-bounce-subtle" style={{ animationDelay: '1s' }}></div>
-        
-        <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto text-center relative z-10 pt-20 animate-fade-in">
-          <h1 className="text-4xl md:text-6xl lg:text-[600%] font-semibold mb-2  leading-tight drop-shadow-2xl">
-            {t.hero.driverHeadline}
-          </h1>
-          <h3 className="text-4xl md:text-6xl lg:text-5xl mb-4 text-balance leading-tight drop-shadow-2xl">
-            {t.hero.driverHeadlines}
-          </h3>
-            <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
-              {t.drivers.hero.driversSubheadline}
+        {/* Content */}
+        <div className="container mx-auto relative z-10 pt-20 px-4">
+          <div className="max-w-2xl text-left animate-fade-in">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
+              {t.hero.driverHeadline}
+            </h1>
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-[#AF8D2C] via-[#F4EF89] to-[#EDC967] text-transparent bg-clip-text leading-tight">
+              {t.hero.driverHeadlines}
+            </h2>
+            <p className="text-lg md:text-xl mb-8 text-gray-300 max-w-lg leading-relaxed">
+              {t.drivers.hero.subheadline}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
+            <div className="flex flex-col sm:flex-row gap-4 animate-slide-up">
               <Link href={`/${locale}/onboarding`}>
-                <button className="gradient-primary text-white border border-red-300 font-semibold text-xl px-8 py-3 rounded-lg shadow-2xl btn-animation hover:shadow-red-500/25">
-                  {t.drivers.hero.beginApplication}
-                </button>
+                <Button text={t.drivers.hero.beginApplication} variant="primary" />
               </Link>
               <button 
-                className="border-2 border-white text-white hover:bg-white hover:text-black font-semibold text-base px-6 py-3 rounded-lg btn-animation glass backdrop-blur-sm"
+                className="border-2 border-gray-500 text-white hover:bg-white hover:text-black font-medium px-8 py-3 rounded-lg transition-colors"
                 onClick={() => document.getElementById('requirements')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 {t.drivers.hero.seeRequirements}
@@ -104,8 +98,23 @@ export default function DriversPage({ params: { locale } }: DriversPageProps) {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Driver Ready Section */}
       <section className="py-16 bg-gray-50 relative overflow-hidden">
+        <div className="container mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 leading-tight">
+            {t.hero.driverHeadline}
+          </h2>
+          <h3 className="text-4xl md:text-5xl font-bold text-red-500 mb-6 leading-tight">
+            {t.hero.driverHeadlines}
+          </h3>
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed">
+            {t.hero.driversSubheadline}
+          </p>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16 bg-white relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-10 left-10 w-32 h-32 bg-red-600 rounded-full blur-3xl"></div>
@@ -147,7 +156,7 @@ export default function DriversPage({ params: { locale } }: DriversPageProps) {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto text-center">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
@@ -162,7 +171,7 @@ export default function DriversPage({ params: { locale } }: DriversPageProps) {
             {benefits.map((benefit, index) => (
               <div 
                 key={index} 
-                className="bg-gray-50 rounded-xl p-6 text-center group hover:bg-red-50 hover:scale-105 transition-all duration-300 border border-gray-100 hover:border-red-200"
+                className="bg-white rounded-xl p-6 text-center group hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100 hover:border-red-200"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 group-hover:scale-110 transition-all duration-300">
@@ -181,7 +190,7 @@ export default function DriversPage({ params: { locale } }: DriversPageProps) {
       </section>
 
       {/* Requirements Section */}
-      <section id="requirements" className="py-16 bg-gray-50">
+      <section id="requirements" className="py-16 bg-white">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -195,7 +204,7 @@ export default function DriversPage({ params: { locale } }: DriversPageProps) {
             
             <div className="grid md:grid-cols-2 gap-4 mb-12">
               {requirements.map((requirement, index) => (
-                <div key={index} className="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                <div key={index} className="flex items-center space-x-3 bg-gray-50 p-4 rounded-lg shadow-sm border border-gray-100">
                   <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <CheckCircle className="w-4 h-4 text-red-600" />
                   </div>
@@ -224,9 +233,7 @@ export default function DriversPage({ params: { locale } }: DriversPageProps) {
               Join thousands of drivers earning more with sustainable transportation
             </p>
             <Link href={`/${locale}/onboarding`}>
-              <button className="gradient-primary text-white font-semibold text-lg px-8 py-4 rounded-lg shadow-2xl btn-animation hover:shadow-red-500/25">
-                {t.drivers.hero.beginApplication}
-              </button>
+              <Button text={t.drivers.hero.beginApplication} variant="primary" className="text-lg px-8 py-4" />
             </Link>
           </div>
         </div>
