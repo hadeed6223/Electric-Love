@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Brain, Shield, CreditCard, Zap, CheckCircle, DollarSign, ArrowRight, Star, Users, Award } from 'lucide-react';
 import Button from '@/components/Button';
 import { Locale, getTranslation } from '@/lib/i18n';
-
+import Image from 'next/image';
 interface DriversPageProps {
   params: { locale: Locale };
 }
@@ -65,7 +65,7 @@ export default function DriversPage({ params: { locale } }: DriversPageProps) {
         <div 
           className="absolute inset-0 bg-cover bg-center object-cover bg-no-repeat opacity-80" 
           style={{
-            backgroundImage: 'url(./BG Driver.png)',
+            backgroundImage: 'url(/driverBg.png)',
             backgroundPosition: 'left center',
             backgroundSize: '100% 100%',
           }}
@@ -99,15 +99,15 @@ export default function DriversPage({ params: { locale } }: DriversPageProps) {
       </section>
 
       {/* Driver Ready Section */}
-      <section className="py-16 bg-gray-50 relative overflow-hidden">
+      <section className="py-16 bg-black relative overflow-hidden">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
             {t.hero.driverHeadline}
           </h2>
-          <h3 className="text-4xl md:text-5xl font-bold text-red-500 mb-6 leading-tight">
+          <h3 className="text-4xl md:text-5xl font-bold text-[#AF8D2C] mb-6 leading-tight">
             {t.hero.driverHeadlines}
           </h3>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto mb-12 leading-relaxed">
             {t.hero.driversSubheadline}
           </p>
         </div>

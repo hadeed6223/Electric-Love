@@ -14,11 +14,10 @@ const Hero: React.FC<HeroProps> = ({ locale }) => {
 
   return (
     <section className="relative min-h-screen text-white flex items-center overflow-hidden bg-black">
-      {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center object-cover bg-no-repeat opacity-80" 
         style={{
-          backgroundImage: 'url(./BG.png)',
+          backgroundImage: 'url(/BG.png)',
           backgroundPosition: 'left center',
           backgroundSize: '100% 100%',
         }}

@@ -20,14 +20,14 @@ const Footer: React.FC<FooterProps> = ({ locale }) => {
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
+      <div className="relative z-10 px-4 lg:px-0 lg:max-w-[105rem] mx-auto py-12">
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand Section - Left */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center">
-                <Zap className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 bg-gradient-to-r from-[#F9F295] via-[#E0AA3E] to-[#BB8A44] rounded-full flex items-center justify-center">
+                <Zap className="w-6 h-6 text-black" />
               </div>
               <div>
                 <h3 className="text-xl font-bold">GoElectricLove</h3>
@@ -44,19 +44,19 @@ const Footer: React.FC<FooterProps> = ({ locale }) => {
             <div className="flex gap-8">
               <Link
                 href={`/${locale}`}
-                className="text-white hover:text-red-400 transition-colors"
+                className="text-white hover:text-[#BB8A44] transition-colors"
               >
                 {t.nav.home}
               </Link>
               <Link
                 href={`/${locale}/drivers`}
-                className="text-white hover:text-red-400 transition-colors"
+                className="text-white hover:text-[#BB8A44] transition-colors"
               >
                 {t.nav.drivers}
               </Link>
               <Link
                 href={`/${locale}/investors`}
-                className="text-white hover:text-red-400 transition-colors"
+                className="text-white hover:text-[#BB8A44] transition-colors"
               >
                 {t.nav.investors}
               </Link>
@@ -88,13 +88,13 @@ const Footer: React.FC<FooterProps> = ({ locale }) => {
             <p>&copy; {t.footer.rights}</p>
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
-          <Link href="#" className="hover:text-red-400 transition-colors">
+          <Link href="#" className="hover:text-[#BB8A44] transition-colors">
               {t.footer.privacy}
             </Link>
-            <Link href="#" className="hover:text-red-400 transition-colors">
+            <Link href="#" className="hover:text-[#BB8A44] transition-colors">
               {t.footer.terms}
             </Link>
-            <Link href="#" className="hover:text-red-400 transition-colors">
+            <Link href="#" className="hover:text-[#BB8A44] transition-colors">
               {t.footer.contact}
             </Link>
           </div>
@@ -103,8 +103,8 @@ const Footer: React.FC<FooterProps> = ({ locale }) => {
           <Image
             src="./Drive Electric.png"
             alt="Wave"
-            width={1000}
-            height={1000}
+            width={3000}
+            height={500}
             className="mt-auto"
           />
         </div>

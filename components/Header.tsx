@@ -6,6 +6,7 @@ import { useRouter, usePathname } from 'next/navigation';
 import { Menu, X, Zap } from 'lucide-react';
 import Button from './Button';
 import { Locale, getTranslation } from '@/lib/i18n';
+import LanguageSwitcher from './LanguageSwitcher';
 
 interface HeaderProps {
   locale: Locale;
@@ -86,7 +87,7 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`font-medium transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-gradient-to-r from-[#F9F295] via-[#E0AA3E] to-[#BB8A44] hover:after:w-full after:transition-all after:duration-300 group-hover:after:left-0 ${getTextColor()}`}
+                className={`font-medium transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#AF8D2C] hover:after:w-full after:transition-all after:duration-300 group-hover:after:left-0 ${getTextColor()}`}
               >
                 {link.label}
               </Link>
@@ -94,12 +95,13 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
           </nav>
 
           <div className="hidden lg:flex items-center space-x-4">
-            <button
+            {/* <button
               onClick={toggleLocale}
               className={`px-3 py-1 text-sm font-medium border rounded-md transition-colors ${getTextColor()} ${getBorderColor()}`}
             >
               {locale.toUpperCase()}
-            </button>
+            </button> */}
+            <LanguageSwitcher locale={locale} />
             <Link href={`/${locale}/drivers`}>
               <Button text={t.nav.driveNow} variant="primary" className='py-2'/>
             </Link>

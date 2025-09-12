@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Sparkles, Heart, Leaf, Zap } from 'lucide-react';
 import Image from 'next/image';
 import { Locale, getTranslation } from '@/lib/i18n';
+import Button from '@/components/Button';
 
 interface BeliefProps {
   locale: Locale;
@@ -30,7 +31,7 @@ const Belief: React.FC<BeliefProps> = ({ locale }) => {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
       
       <div className="container mx-auto relative z-10">
-        <div className="max-w-5xl mx-auto text-center">
+        <div className="max-w-[90rem] mx-auto text-center">
           {/* Icon section */}
           <div className="flex justify-center items-center space-x-3 mb-6 animate-fade-in">
             <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20 transform scale-110">
@@ -52,14 +53,8 @@ const Belief: React.FC<BeliefProps> = ({ locale }) => {
           <div className="space-y-4 animate-slide-up" style={{ animationDelay: '0.4s' }}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href={`/${locale}/drivers`}>
-                <button className="group relative overflow-hidden bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold px-8 py-3 rounded-xl shadow-xl hover:shadow-red-500/25 transition-all duration-300 transform hover:scale-105">
-                  <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                  <span className="relative z-10 flex items-center space-x-2">
-                    <span>{t.belief.driveNow}</span>
-                    <Zap className="w-4 h-4 group-hover:rotate-12 transition-transform duration-300" />
-                  </span>
-                </button>
-              </Link>
+              <Button text={t.nav.driveNow} variant="primary" />
+            </Link>
               
               <Link href={`/${locale}/investors`}>
                 <button className="group relative overflow-hidden border-2 border-white/30 hover:border-white text-white hover:bg-white hover:text-black font-semibold px-8 py-3 rounded-xl backdrop-blur-sm transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-white/10">
@@ -70,15 +65,17 @@ const Belief: React.FC<BeliefProps> = ({ locale }) => {
               </Link>
             </div>
           </div>
-          <Image src="./Wave.png" alt="Belief" width={1000} height={1000} />
+          <div className="w-full">
+          <Image src="./Wave.png" alt="/Belief" width={3000} height={500} />
+          </div>
         </div>
       </div>
       
       {/* Bottom separator */}
-      <div className="absolute bottom-0 left-0 right-0">
+      {/* <div className="absolute bottom-0 left-0 right-0">
         <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
         <div className="h-4 bg-gradient-to-b from-gray-900/50 to-transparent"></div>
-      </div>
+      </div> */}
     </section>
   );
 };
