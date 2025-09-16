@@ -14,14 +14,24 @@ const Hero: React.FC<HeroProps> = ({ locale }) => {
 
   return (
     <section className="relative min-h-screen text-white flex items-center overflow-hidden bg-black">
-      <div 
-        className="absolute inset-0 bg-cover bg-center object-cover bg-no-repeat opacity-80" 
-        style={{
-          backgroundImage: 'url(/BG.png)',
-          backgroundPosition: 'left center',
-          backgroundSize: '100% 100%',
-        }}
-      ></div>
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-80"
+      >
+        <source src="/BG.mp4" type="video/mp4" />
+        {/* Fallback image if video fails to load */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+          style={{
+            backgroundImage: 'url(/BG.png)',
+            backgroundPosition: 'left center',
+            backgroundSize: '100% 100%',
+          }}
+        />
+      </video>
       
       {/* Overlay */}
       {/* <div className="absolute inset-0 bg-gradient-to-r from-red-700/30 via-red-900/10 to-transparent"></div> */}

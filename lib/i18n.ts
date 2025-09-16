@@ -16,25 +16,22 @@ export const translations = {
     hero: {
       headline: 'Drive Electric',
       headlines: 'Earn More',
-      subheadline: 'Turn every mile with GoElectricLove fast onboarding, flexible driving, and the freedom to grow on your terms.',
+      subheadline: 'Fast onboarding, easy payouts, and 24/7 support. Join a tech-forward fleet built to help you succeed.',
       driveNow: 'Drive Now',
       howItWorks: 'How it Works',
-      driverHeadline: 'Ready to Drive',
-      driverHeadlines: 'with GoElectricLove?',
-      driversSubheadline: 'See what you need to get started, meet the requirements, and join our growing driver community.'
     },
     valueProps: {
       title: 'Why Choose Electric Love',
       onboard: {
-        title: 'Onboard Fast',
+        title: 'Onboard \n Fast',
         description: 'AI-powered onboarding gets you driving in under 24 hours'
       },
       compliance: {
-        title: 'Compliance Handled',
+        title: 'Compliance \n Handled',
         description: 'We take care of all regulations and requirements automatically'
       },
       operate: {
-        title: 'Operate Efficiently',
+        title: 'Operate \n Efficiently',
         description: 'Smart routing and scheduling maximize your earnings'
       }
     },
@@ -102,32 +99,66 @@ export const translations = {
     },
     drivers: {
       hero: {
-        headline1: 'Conduce un vehículo eléctrico.',
-        headline2: 'Obtén ganancias fiables.',
-        subheadline: 'Recorre cada kilómetro con GoElectricAma la incorporación rápida, la conducción flexible y la libertad de crecer en tus propios términos.',
-        driversSubheadline: 'Ve lo que necesitas para comenzar, cumple los requisitos y únete a nuestra creciente comunidad de conductores.',
+        driverHeadline: 'Start driving',
+        driverHeadlines: 'a Tesla',
+        driversSubheadline: 'Simple onboarding, built-in compliance, and instant payouts.',
         beginApplication: 'Begin Application',
-        seeRequirements: 'See Requirements'
+        seeRequirements: 'See Requirements',
+        readyToStartEarning: 'Ready to Drive',
+        withGoElectricLove: 'with GoElectricLove?',
+        joinThousandsOfDrivers: 'Join thousands of drivers earning more with sustainable transportation'
       },
       features: {
         ai: {
-          title: 'AI-Powered Onboarding',
+          title: 'AI-Powered \n Onboarding',
           description: 'Smart application process gets you approved faster'
         },
         compliance: {
-          title: 'Compliance Built-In',
+          title: 'Compliance \n Built-In',
           description: 'All regulations and requirements automatically handled'
         },
         payouts: {
-          title: 'Easy Payouts',
+          title: 'Easy \n Payouts',
           description: 'Weekly direct deposits with detailed earnings reports'
         }
+      },
+      benefits: {
+        fastApproval: {
+          title: 'Fast \n Approval',
+          description: 'Get approved in under 24 hours with our AI-powered system'
+        },
+        premiumVehicles: {
+          title: 'Premium \n Vehicles',
+          description: 'Drive the latest Tesla models with full maintenance included'
+        },
+        higherEarnings: {
+          title: 'Higher \n Earnings',
+          description: 'Earn up to 30% more with electric vehicle incentives'
+        }
+      },
+      requirements: {
+        title1: 'Requirements',
+        title2: 'Requirements',
+        subheading: 'Make sure you meet these basic requirements before applying',
+        req1: 'Valid driver\'s license (2+ years)',
+        req2: 'Clean driving record',
+        req3: 'Background check clearance',
+        req4: 'Vehicle insurance',
+        req5: 'Smartphone with data plan',
+        req6: 'Age 21 or older'
       }
     },
     investors: {
       title: 'Investor Command Center',
       subtitle: 'Coming soon: portfolio performance, green miles, CO₂ avoided metrics, and comprehensive sustainability reporting.',
       getNotified: 'Get Notified'
+    },
+    contact: {
+      title: 'Get in Touch',
+      subtitle: 'Questions? We\'d love to hear from you. Reach out to our team below.',
+      email: 'Email:',
+      phone: 'Phone:',
+      address: 'Address:'
     },
     chatbot: {
       title: 'How can we help?',
@@ -148,25 +179,22 @@ export const translations = {
     hero: {
       headline: 'Conduce Eléctrico. Gana Más.',
       headlines: 'Gana Más',
-      subheadline: 'Únete a nuestra flota de conductores Tesla y gana dinero mientras reduces tu huella de carbono. Incorporación rápida, cumplimiento gestionado, operaciones eficientes.',
+      subheadline: 'Incorporación rápida, pagos sencillos y soporte 24/7. Únete a un equipo de tecnología de vanguardia diseñado para ayudarte a alcanzar el éxito.',
       driveNow: 'Conducir Ahora',
       howItWorks: 'Cómo Funciona',
-      driverHeadline: '¿Listo para Conducir',
-      driverHeadlines: 'con GoElectricLove?',
-      driversSubheadline: 'Ve lo que necesitas para comenzar, cumple los requisitos y únete a nuestra creciente comunidad de conductores.'
     },
     valueProps: {
       title: 'Por Qué Elegir Electric Love',
       onboard: {
-        title: 'Incorporación Rápida',
+        title: 'Incorporación \n Rápida',
         description: 'Incorporación con IA te permite conducir en menos de 24 horas'
       },
       compliance: {
-        title: 'Cumplimiento Gestionado',
+        title: 'Cumplimiento \n Gestionado',
         description: 'Nos encargamos automáticamente de todas las regulaciones y requisitos'
       },
       operate: {
-        title: 'Opera Eficientemente',
+        title: 'Opera \n Eficientemente',
         description: 'Enrutamiento inteligente y programación maximizan tus ganancias'
       }
     },
@@ -234,31 +262,66 @@ export const translations = {
     },
     drivers: {
       hero: {
-        headline: 'Comienza a Conducir un Tesla',
-        subheadline: 'Únete a nuestra flota premium de vehículos eléctricos y comienza a ganar hoy con soporte completo y cumplimiento gestionado.',
-        driversSubheadline: 'Ve lo que necesitas para comenzar, cumple los requisitos y únete a nuestra creciente comunidad de conductores.',
+        driverHeadline: 'Comienza a Conducir',
+        driverHeadlines: 'un Tesla',
+        driversSubheadline: 'Incorporación sencilla, cumplimiento integrado y pagos instantáneos.',
         beginApplication: 'Comenzar Aplicación',
-        seeRequirements: 'Ver Requisitos'
+        seeRequirements: 'Ver Requisitos',
+        readyToStartEarning: '¿Listo para Conducir?',
+        withGoElectricLove: 'con GoElectricLove?',
+        joinThousandsOfDrivers: 'Únete a miles de conductores ganando más con transporte sostenible'
       },
       features: {
         ai: {
-          title: 'Incorporación con IA',
+          title: 'Incorporación \n con IA',
           description: 'Proceso de aplicación inteligente te aprueba más rápido'
         },
         compliance: {
-          title: 'Cumplimiento Integrado',
+          title: 'Cumplimiento \n Integrado',
           description: 'Todas las regulaciones y requisitos gestionados automáticamente'
         },
         payouts: {
-          title: 'Pagos Fáciles',
+          title: 'Pagos \n Fáciles',
           description: 'Depósitos directos semanales con reportes detallados de ganancias'
         }
+      },
+      benefits: {
+        fastApproval: {
+          title: 'Rápido \n Aprobación',
+          description: 'Obtén aprobación en menos de 24 horas con nuestro sistema con IA'
+        },
+        premiumVehicles: {
+          title: 'Vehículos \n Premium',
+          description: 'Conduce los modelos Tesla más recientes con mantenimiento completo incluido'
+        },
+        higherEarnings: {
+          title: 'Ganancias \n Más Altas',
+          description: 'Gana hasta un 30% más con incentivos de vehículos eléctricos'
+        }
+      },
+      requirements: {
+        title1: 'Requisitos',
+        title2: 'Requisitos',
+        subheading: 'Asegúrate de cumplir con estos requisitos básicos antes de aplicar',
+        req1: 'Licencia de conducir válida (2+ años)',
+        req2: 'Registro de conducción limpio',
+        req3: 'Verificación de antecedentes',
+        req4: 'Seguro del vehículo',
+        req5: 'Plan de datos del smartphone',
+        req6: 'Edad 21 o superior'
       }
     },
     investors: {
       title: 'Centro de Comando para Inversores',
       subtitle: 'Próximamente: rendimiento de cartera, millas verdes, métricas de CO₂ evitado, y reportes integrales de sostenibilidad.',
       getNotified: 'Recibir Notificaciones'
+    },
+    contact: {
+      title: 'Contacto',
+      subtitle: '¿Preguntas? Nos encantaría escuchar de ti. Contacta a nuestro equipo a continuación.',
+      email: 'Email:',
+      phone: 'Teléfono:',
+      address: 'Dirección:'
     },
     chatbot: {
       title: '¿Cómo podemos ayudarte?',

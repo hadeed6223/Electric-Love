@@ -95,7 +95,7 @@
 @layer components {
   /* Color utility classes */
   .bg-primary {
-    @apply bg-red-600;
+    @apply bg-[#BB8A44];
   }
   
   .bg-secondary {
@@ -128,7 +128,7 @@
   
   /* Layout components */
   .container {
-    @apply max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8;
+    @apply  md:max-w-[60rem] lg:max-w-[60rem] xl:max-w-[80rem] 2xl:max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8;
   }
   
   /* Enhanced card component */
@@ -157,9 +157,9 @@
   
   /* Glass morphism effect */
   .glass {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(#BB8A44, 0.1);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(#BB8A44, 0.2);
   }
   
   /* Enhanced hover effects */
@@ -169,7 +169,7 @@
   
   /* Text gradients */
   .text-gradient-primary {
-    background: linear-gradient(135deg, #AF8D2C, #F9F295);
+    background: linear-gradient(135deg, #AF8D2C, #BB8A44);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

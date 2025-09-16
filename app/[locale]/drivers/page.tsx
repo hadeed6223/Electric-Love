@@ -5,6 +5,7 @@ import { Brain, Shield, CreditCard, Zap, CheckCircle, DollarSign, ArrowRight, St
 import Button from '@/components/Button';
 import { Locale, getTranslation } from '@/lib/i18n';
 import Image from 'next/image';
+
 interface DriversPageProps {
   params: { locale: Locale };
 }
@@ -33,28 +34,28 @@ export default function DriversPage({ params: { locale } }: DriversPageProps) {
   const benefits = [
     {
       icon: Zap,
-      title: 'Fast Approval',
-      description: 'Get approved in under 24 hours with our AI-powered system'
+      title: t.drivers.benefits.fastApproval.title,
+      description: t.drivers.benefits.fastApproval.description
     },
     {
       icon: CheckCircle,
-      title: 'Premium Vehicles',
-      description: 'Drive the latest Tesla models with full maintenance included'
+      title: t.drivers.benefits.premiumVehicles.title,
+      description: t.drivers.benefits.premiumVehicles.description
     },
     {
       icon: DollarSign,
-      title: 'Higher Earnings',
-      description: 'Earn up to 30% more with electric vehicle incentives'
+      title: t.drivers.benefits.higherEarnings.title,
+      description: t.drivers.benefits.higherEarnings.description
     }
   ];
 
   const requirements = [
-    'Valid driver\'s license (2+ years)',
-    'Clean driving record',
-    'Background check clearance',
-    'Vehicle insurance',
-    'Smartphone with data plan',
-    'Age 21 or older'
+    t.drivers.requirements.req1,
+    t.drivers.requirements.req2,
+    t.drivers.requirements.req3,
+    t.drivers.requirements.req4,
+    t.drivers.requirements.req5,
+    t.drivers.requirements.req6
   ];
 
   return (
@@ -75,13 +76,13 @@ export default function DriversPage({ params: { locale } }: DriversPageProps) {
         <div className="container mx-auto relative z-10 pt-20 px-4">
           <div className="max-w-2xl text-left animate-fade-in">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
-              {t.hero.driverHeadline}
+              {t.drivers.hero.driverHeadline}
             </h1>
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-[#AF8D2C] via-[#F4EF89] to-[#EDC967] text-transparent bg-clip-text leading-tight">
-              {t.hero.driverHeadlines}
+              {t.drivers.hero.driverHeadlines}
             </h2>
             <p className="text-lg md:text-xl mb-8 text-gray-300 max-w-lg leading-relaxed">
-              {t.drivers.hero.subheadline}
+              {t.drivers.hero.driversSubheadline}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 animate-slide-up">
               <Link href={`/${locale}/onboarding`}>
@@ -102,53 +103,76 @@ export default function DriversPage({ params: { locale } }: DriversPageProps) {
       <section className="py-16 bg-black relative overflow-hidden">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-            {t.hero.driverHeadline}
+            {t.drivers.hero.readyToStartEarning}
           </h2>
           <h3 className="text-4xl md:text-5xl font-bold text-[#AF8D2C] mb-6 leading-tight">
-            {t.hero.driverHeadlines}
+            {t.drivers.hero.withGoElectricLove}
           </h3>
           <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto mb-12 leading-relaxed">
-            {t.hero.driversSubheadline}
+            {t.drivers.hero.joinThousandsOfDrivers}
           </p>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-white relative overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-10 left-10 w-32 h-32 bg-red-600 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-24 h-24 bg-red-600 rounded-full blur-3xl"></div>
-        </div>
-        
-        <div className="container mx-auto">
+      <section className="py-16 bg-black border-b border-gray-600 relative overflow-hidden">
+        <div className="container mx-auto bg-black py-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-              Why Drive With Us
+            <h2 className="text-4xl font-bold mb-4">
+              <span className="text-white">Why Drive </span>
+              <span className="text-[#AF8D2C]">With Us</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Experience the future of rideshare driving with premium electric vehicles
-            </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 text-center group hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100 hover:border-red-100 relative overflow-hidden">
-                {/* Card background glow */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300 bg-gradient-to-br from-red-500 via-transparent to-red-300"></div>
+              <div 
+                key={index} 
+                className="relative rounded-2xl p-8 text-left group hover:scale-105 transition-all duration-300 overflow-hidden"
+                style={{
+                  background: '#2D2D2D',
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  backgroundImage: 'url(/valueCards.png)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundBlendMode: 'overlay',
+                  opacity: 0.9
+                }}
+              >
+                {/* Noise texture overlay */}
+                <div 
+                  className="absolute inset-0 opacity-40"
+                  style={{
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.4'/%3E%3C/svg%3E")`,
+                    mixBlendMode: 'overlay'
+                  }}
+                />
                 
-                <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-red-600 group-hover:scale-110 transition-all duration-300 shadow-lg relative z-10">
-                  <feature.icon className="w-8 h-8 text-red-600 group-hover:text-white transition-colors" />
+                {/* Icon container */}
+                <div className="relative z-10 mb-8">
+                  <div 
+                    className="w-12 h-12 rounded-xl flex items-center justify-center border"
+                    style={{
+                      backgroundColor: 'rgba(175, 141, 44, 0.15)',
+                      borderColor: 'rgba(175, 141, 44, 0.3)',
+                    }}
+                  >
+                    <feature.icon className="w-6 h-6 text-[#AF8D2C]" />
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-black mb-4 relative z-10">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed relative z-10">
-                  {feature.description}
-                </p>
                 
-                {/* Decorative elements */}
-                <div className="absolute top-3 right-3 w-2 h-2 bg-red-600 rounded-full opacity-20 group-hover:opacity-60 transition-opacity duration-300"></div>
+                {/* Content */}
+                <div className="relative z-10 mt-10">
+                  <h3 className="text-4xl font-extralight text-white mb-4 leading-tight whitespace-pre-line">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-400 text-base leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+                
+                {/* Hover effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#AF8D2C]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             ))}
           </div>
@@ -156,33 +180,65 @@ export default function DriversPage({ params: { locale } }: DriversPageProps) {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-black border-b border-gray-600">
         <div className="container mx-auto text-center">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-              Driver Benefits
+            <h2 className="text-4xl font-bold mb-4">
+              <span className="text-white">Driver </span>
+              <span className="text-[#AF8D2C]">Benefits</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Enjoy exclusive perks and higher earnings as an electric vehicle driver
-            </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {benefits.map((benefit, index) => (
               <div 
                 key={index} 
-                className="bg-white rounded-xl p-6 text-center group hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100 hover:border-red-200"
-                style={{ animationDelay: `${index * 200}ms` }}
+                className="relative rounded-2xl p-8 text-left group hover:scale-105 transition-all duration-300 overflow-hidden"
+                style={{
+                  background: '#2D2D2D',
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  backgroundImage: 'url(/valueCards.png)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundBlendMode: 'overlay',
+                  opacity: 0.9,
+                  animationDelay: `${index * 200}ms`
+                }}
               >
-                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 group-hover:scale-110 transition-all duration-300">
-                  <benefit.icon className="w-6 h-6 text-red-600 group-hover:text-white transition-colors" />
+                {/* Noise texture overlay */}
+                <div 
+                  className="absolute inset-0 opacity-40"
+                  style={{
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.4'/%3E%3C/svg%3E")`,
+                    mixBlendMode: 'overlay'
+                  }}
+                />
+                
+                {/* Icon container */}
+                <div className="relative z-10 mb-8">
+                  <div 
+                    className="w-12 h-12 rounded-xl flex items-center justify-center border"
+                    style={{
+                      backgroundColor: 'rgba(175, 141, 44, 0.15)',
+                      borderColor: 'rgba(175, 141, 44, 0.3)',
+                    }}
+                  >
+                    <benefit.icon className="w-6 h-6 text-[#AF8D2C]" />
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-black mb-2">
-                  {benefit.title}
-                </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  {benefit.description}
-                </p>
+                
+                {/* Content */}
+                <div className="relative z-10 mt-10">
+                  <h3 className="text-4xl font-extralight text-white mb-4 leading-tight whitespace-pre-line">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-400 text-base leading-relaxed">
+                    {benefit.description}
+                  </p>
+                </div>
+                
+                {/* Hover effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#AF8D2C]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             ))}
           </div>
@@ -190,25 +246,66 @@ export default function DriversPage({ params: { locale } }: DriversPageProps) {
       </section>
 
       {/* Requirements Section */}
-      <section id="requirements" className="py-16 bg-white">
+      <section id="requirements" className="py-16 bg-black">
         <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">
+              <span className="text-white">{t.drivers.requirements.title1} </span>
+              <span className="text-[#AF8D2C]">{t.drivers.requirements.title2}</span>
+            </h2>
+            <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
+              {t.drivers.requirements.subheading}
+            </p>
+          </div>
+          
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-                Driver Requirements
-              </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Make sure you meet these basic requirements before applying
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-4 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {requirements.map((requirement, index) => (
-                <div key={index} className="flex items-center space-x-3 bg-gray-50 p-4 rounded-lg shadow-sm border border-gray-100">
-                  <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <CheckCircle className="w-4 h-4 text-red-600" />
+                <div 
+                  key={index} 
+                  className="relative rounded-2xl p-6 text-left group hover:scale-105 transition-all duration-300 overflow-hidden"
+                  style={{
+                    background: '#2D2D2D',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    backgroundImage: 'url(/valueCards.png)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundBlendMode: 'overlay',
+                    opacity: 0.9,
+                    animationDelay: `${index * 100}ms`
+                  }}
+                >
+                  {/* Noise texture overlay */}
+                  <div 
+                    className="absolute inset-0 opacity-40"
+                    style={{
+                      backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.4'/%3E%3C/svg%3E")`,
+                      mixBlendMode: 'overlay'
+                    }}
+                  />
+                  
+                  <div className="flex items-center space-x-4 relative z-10">
+                    {/* Icon container */}
+                    <div 
+                      className="w-12 h-12 rounded-xl flex items-center justify-center border flex-shrink-0"
+                      style={{
+                        backgroundColor: 'rgba(175, 141, 44, 0.15)',
+                        borderColor: 'rgba(175, 141, 44, 0.3)',
+                      }}
+                    >
+                      <CheckCircle className="w-6 h-6 text-[#AF8D2C]" />
+                    </div>
+                    
+                    {/* Content */}
+                    <div className="flex-1">
+                      <p className="text-white text-lg font-medium leading-relaxed">
+                        {requirement}
+                      </p>
+                    </div>
                   </div>
-                  <span className="text-gray-700">{requirement}</span>
+                  
+                  {/* Hover effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#AF8D2C]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               ))}
             </div>

@@ -32,8 +32,8 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
   useEffect(() => {
     const isHomePage = pathname === `/${locale}` || pathname === `/${locale}/`;
     const isOnboardingPage = pathname.includes('/onboarding');
-    const isInvestorPage = pathname.includes('/investors');
-    setIsOnWhitePage(isOnboardingPage || isInvestorPage);
+    // const isInvestorPage = pathname.includes('/investors');
+    setIsOnWhitePage(isOnboardingPage);
   }, [pathname, locale]);
 
   const toggleLocale = () => {
@@ -45,6 +45,7 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
   const navLinks = [
     { href: `/${locale}`, label: t.nav.home },
     { href: `/${locale}#how-it-works`, label: t.nav.howItWorks },
+    { href: `/${locale}/drivers`, label: t.nav.drivers },
     { href: `/${locale}/investors`, label: t.nav.investors },
     { href: `/${locale}/contact`, label: t.nav.contact },
   ];
