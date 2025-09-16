@@ -64,7 +64,7 @@ const Impact: React.FC<ImpactProps> = ({ locale }) => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: 'url(/image.png)',
             backgroundPosition: 'left center',
