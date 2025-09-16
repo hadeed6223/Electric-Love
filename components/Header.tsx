@@ -7,6 +7,7 @@ import { Menu, X, Zap } from 'lucide-react';
 import Button from './Button';
 import { Locale, getTranslation } from '@/lib/i18n';
 import LanguageSwitcher from './LanguageSwitcher';
+import Image from 'next/image';
 
 interface HeaderProps {
   locale: Locale;
@@ -75,12 +76,9 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
       <div className="container mx-auto relative z-10 px-3 lg:px-0">
         <div className="flex justify-between items-center py-4">
           <Link href={`/${locale}`} className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-            <div className="w-8 h-8 bg-gradient-to-r from-[#F9F295] via-[#E0AA3E] to-[#BB8A44] rounded-full flex items-center justify-center">
-              <Zap className="w-5 h-5 text-black" />
+            <div className="flex items-center justify-center relative bottom-2">
+            <Image src="/logo.png" alt="GoElectricLove" width={150} height={50} />
             </div>
-            <span className={`text-xl font-bold transition-colors ${getTextColor()}`}>
-              GoElectricLove
-            </span>
           </Link>
 
           <nav className="hidden lg:flex items-center space-x-8 group">
@@ -96,12 +94,6 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
           </nav>
 
           <div className="hidden lg:flex items-center space-x-4">
-            {/* <button
-              onClick={toggleLocale}
-              className={`px-3 py-1 text-sm font-medium border rounded-md transition-colors ${getTextColor()} ${getBorderColor()}`}
-            >
-              {locale.toUpperCase()}
-            </button> */}
             <LanguageSwitcher locale={locale} />
             <Link href={`/${locale}/drivers`}>
               <Button text={t.nav.driveNow} variant="primary" className='py-2'/>
