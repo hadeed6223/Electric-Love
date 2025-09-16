@@ -66,7 +66,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ locale, className =
         
         {/* Ripple Effect */}
         {isAnimating && (
-          <div className="absolute inset-0 rounded-full bg-red-500/20 animate-ping"></div>
+          <div className="absolute inset-0 rounded-full bg-[#BB8A44]/20 animate-ping"></div>
         )}
       </button>
     </div>

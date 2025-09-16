@@ -79,12 +79,12 @@ const Impact: React.FC<ImpactProps> = ({ locale }) => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            <span className="text-white">Our </span>
-            <span className="text-[#AF8D2C]">Impact</span>
+            <span className="text-white">{t.impact.title1} </span>
+            <span className="text-[#AF8D2C]">{t.impact.title2}</span>
           </h2>
           
           <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            See the positive environmental impact we're making together through sustainable transportation
+            {t.impact.subtitle}
           </p>
         </div>
         
@@ -101,7 +101,7 @@ const Impact: React.FC<ImpactProps> = ({ locale }) => {
                   {counters.miles.toLocaleString()}
                 </div>
                 <div className="text-base md:text-lg text-gray-300 font-medium">
-                  Green Miles Driven
+                  {t.impact.greenMiles}
                 </div>
               </div>
             </div>
@@ -116,7 +116,7 @@ const Impact: React.FC<ImpactProps> = ({ locale }) => {
                   {counters.co2.toLocaleString()}&nbsp;lbs
                 </div>
                 <div className="text-base md:text-lg text-gray-300 font-medium">
-                  CO₂ Avoided
+                  {t.impact.co2Avoided}
                 </div>
               </div>
             </div>
@@ -131,7 +131,7 @@ const Impact: React.FC<ImpactProps> = ({ locale }) => {
                   {counters.sessions.toLocaleString()}
                 </div>
                 <div className="text-base md:text-lg text-gray-300 font-medium">
-                  Charging Sessions
+                  {t.impact.chargingSessions}
                 </div>
               </div>
             </div>

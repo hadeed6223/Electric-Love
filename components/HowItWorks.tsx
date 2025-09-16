@@ -49,11 +49,11 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ locale }) => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-white">How It </span>
-            <span className="text-[#AF8D2C]">Works</span>
+            <span className="text-white">{t.howItWorks.title1} </span>
+            <span className="text-[#AF8D2C]">{t.howItWorks.title2}</span>
           </h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Follow these simple steps to start your journey with us
+            {t.howItWorks.subtitle}
           </p>
         </div>
         
@@ -84,7 +84,7 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ locale }) => {
               />
               
               {/* Step number badge */}
-              <div className="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-br from-[#AF8D2C] to-[#F9F295] rounded-full flex items-center justify-center shadow-lg z-20">
+              <div className="absolute -top-1 -right-1 w-12 h-12 bg-gradient-to-br from-[#AF8D2C] to-[#F9F295] rounded-full flex items-center justify-center shadow-lg z-20">
                 <span className="text-black font-bold text-lg">{step.number}</span>
               </div>
               

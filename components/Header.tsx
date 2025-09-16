@@ -51,7 +51,7 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
   ];
 
   const getTextColor = () => {
-    if (isScrolled) return 'text-black';
+    if (isScrolled) return 'text-white';
     if (isOnWhitePage) return 'text-black';
     return 'text-white text-shadow-outline';
   };
@@ -62,17 +62,17 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
   };
 
   const getMenuButtonColor = () => {
-    if (isScrolled || isOnWhitePage) return 'hover:bg-gray-100 text-black';
+    if (isScrolled || isOnWhitePage) return 'hover:bg-gray-100 text-white';
     return 'hover:bg-white/20 text-white text-shadow-outline';
   };
 
   return (
     <header className="fixed top-0 w-full z-50">
-      <div className={`absolute inset-0 bg-white shadow-md transition-transform duration-500 ease-out ${
+      <div className={`absolute inset-0 bg-black/40 backdrop-blur-lg border-b border-white/10 shadow-lg transition-transform duration-500 ease-out ${
         isScrolled ? 'transform translate-y-0' : 'transform -translate-y-full'
       }`}></div>
       
-      <div className="container mx-auto relative z-10 px-3">
+      <div className="container mx-auto relative z-10 px-3 lg:px-0">
         <div className="flex justify-between items-center py-4">
           <Link href={`/${locale}`} className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <div className="w-8 h-8 bg-gradient-to-r from-[#F9F295] via-[#E0AA3E] to-[#BB8A44] rounded-full flex items-center justify-center">

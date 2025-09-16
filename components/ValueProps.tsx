@@ -32,8 +32,8 @@ const ValueProps: React.FC<ValuePropsProps> = ({ locale }) => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
-            <span className="text-white">Why Choose </span>
-            <span className="text-[#AF8D2C]">Electric Love</span>
+            <span className="text-white">{t.valueProps.title1} </span>
+            <span className="text-[#AF8D2C]">{t.valueProps.title2}</span>
           </h2>
         </div>
         
@@ -41,7 +41,7 @@ const ValueProps: React.FC<ValuePropsProps> = ({ locale }) => {
           {props.map((prop, index) => (
             <div 
               key={index} 
-              className="relative rounded-2xl p-8 text-left shadow-2xl shadow-[#9DAF89]/50 border border-white group hover:scale-105 transition-all duration-300 overflow-hidden"
+              className="relative rounded-2xl p-4 text-left shadow-2xl shadow-[#9DAF89]/30 border border-white group hover:scale-105 transition-all duration-300 overflow-hidden"
               style={{
                 background: '#2D2D2D',
                 border: '1px solid rgba(255, 255, 255, 0.1)',

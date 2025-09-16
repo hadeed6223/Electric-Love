@@ -100,7 +100,7 @@ export default function DriversPage({ params: { locale } }: DriversPageProps) {
       </section>
 
       {/* Driver Ready Section */}
-      <section className="py-16 bg-black relative overflow-hidden">
+      <section className="py-16 bg-black/90 relative overflow-hidden">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
             {t.drivers.hero.readyToStartEarning}
@@ -119,8 +119,8 @@ export default function DriversPage({ params: { locale } }: DriversPageProps) {
         <div className="container mx-auto bg-black py-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">
-              <span className="text-white">Why Drive </span>
-              <span className="text-[#AF8D2C]">With Us</span>
+              <span className="text-white">{t.drivers.features.title1} </span>
+              <span className="text-[#AF8D2C]">{t.drivers.features.title2}</span>
             </h2>
           </div>
           
@@ -184,8 +184,8 @@ export default function DriversPage({ params: { locale } }: DriversPageProps) {
         <div className="container mx-auto text-center">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">
-              <span className="text-white">Driver </span>
-              <span className="text-[#AF8D2C]">Benefits</span>
+              <span className="text-white">{t.drivers.benefits.title1} </span>
+              <span className="text-[#AF8D2C]">{t.drivers.benefits.title2}</span>
             </h2>
           </div>
           
@@ -324,10 +324,10 @@ export default function DriversPage({ params: { locale } }: DriversPageProps) {
         <div className="container mx-auto text-center relative z-10">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Start Earning?
+              {t.drivers.hero.readyToStartEarning}
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of drivers earning more with sustainable transportation
+              {t.drivers.hero.joinThousandsOfDrivers}
             </p>
             <Link href={`/${locale}/onboarding`}>
               <Button text={t.drivers.hero.beginApplication} variant="primary" className="text-lg px-8 py-4" />

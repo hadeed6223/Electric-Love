@@ -94,7 +94,7 @@ const Footer: React.FC<FooterProps> = ({ locale }) => {
             <Link href="#" className="hover:text-[#BB8A44] transition-colors">
               {t.footer.terms}
             </Link>
-            <Link href="#" className="hover:text-[#BB8A44] transition-colors">
+            <Link href={`/${locale}/contact`} className="hover:text-[#BB8A44] transition-colors">
               {t.footer.contact}
             </Link>
           </div>

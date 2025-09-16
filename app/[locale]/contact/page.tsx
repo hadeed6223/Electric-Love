@@ -12,7 +12,7 @@ export default function ContactPage({ params: { locale } }: ContactPageProps) {
   return (
     <div className="min-h-screen bg-black flex items-center justify-center p-4">
       {/* <div className="w-full max-w-2xl bg-white rounded-2xl shadow-xl p-8 transform transition-all hover:scale-[1.02]"> */}
-        <div className="text-center">
+        <div className="text-center justify-center">
           <h1 className="text-3xl md:text-4xl font-bold text-[#BB8A44] mb-4">
             {t.contact.title}
           </h1>
@@ -22,9 +22,9 @@ export default function ContactPage({ params: { locale } }: ContactPageProps) {
           </p>
           
           <div className="space-y-6">
-            <div className="flex items-center justify-center space-x-3 text-gray-700 p-4 bg-gray-50 rounded-lg">
+            <div className="flex space-x-3 text-gray-700 p-4 bg-gray-50 rounded-lg justify-center">
               <Mail className="w-6 h-6 text-[#BB8A44]" />
-              <span className="font-medium">{t.contact.email}:</span>
+              <span className="font-medium">{t.contact.email}</span>
               <a 
                 href="mailto:support@goelectriclove.com" 
                 className="text-black hover:text-[#BB8A44] transition-colors"
@@ -33,14 +33,14 @@ export default function ContactPage({ params: { locale } }: ContactPageProps) {
               </a>
             </div>
             
-            <div className="flex items-center justify-center space-x-3 text-gray-700 p-4 bg-gray-50 rounded-lg">
+            <div className="flex space-x-3 text-gray-700 p-4 bg-gray-50 rounded-lg justify-center">
               <Phone className="w-6 h-6 text-[#BB8A44]" />
-              <span className="font-medium">{t.contact.phone}:</span>
+              <span className="font-medium">{t.contact.phone}</span>
               <a 
-                href="tel:512.270.9644" 
-                className="text-black hover:text-[#BB8A44] transition-colors"
+                href="tel:+1 (555) 123-4567" 
+                className="text-black hover:text-[#BB8A44] transition-colors w-[203px] text-start"
               >
-                512.270.9644
+                +1 (555) 123-4567
               </a>
             </div>
           </div>

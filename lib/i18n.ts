@@ -21,7 +21,8 @@ export const translations = {
       howItWorks: 'How it Works',
     },
     valueProps: {
-      title: 'Why Choose Electric Love',
+      title1: 'Why Choose',
+      title2: 'Electric Love',
       onboard: {
         title: 'Onboard \n Fast',
         description: 'AI-powered onboarding gets you driving in under 24 hours'
@@ -36,7 +37,9 @@ export const translations = {
       }
     },
     howItWorks: {
-      title: 'How It Works',
+      title1: 'How It',
+      title2: 'Works',
+      subtitle: 'Follow these simple steps to start your journey with us',
       apply: {
         title: 'Apply',
         description: 'Complete our simple online application'
@@ -55,7 +58,9 @@ export const translations = {
       }
     },
     impact: {
-      title: 'Our Impact',
+      title1: 'Our',
+      title2: 'Impact',
+      subtitle: 'See the positive environmental impact we\'re making together through sustainable transportation',
       greenMiles: 'Green Miles Driven',
       co2Avoided: 'CO₂ Avoided',
       chargingSessions: 'Charging Sessions'
@@ -109,6 +114,8 @@ export const translations = {
         joinThousandsOfDrivers: 'Join thousands of drivers earning more with sustainable transportation'
       },
       features: {
+        title1: 'Why Drive',
+        title2: 'With Us',
         ai: {
           title: 'AI-Powered \n Onboarding',
           description: 'Smart application process gets you approved faster'
@@ -123,6 +130,8 @@ export const translations = {
         }
       },
       benefits: {
+        title1: 'Driver',
+        title2: 'Benefits',
         fastApproval: {
           title: 'Fast \n Approval',
           description: 'Get approved in under 24 hours with our AI-powered system'
@@ -151,6 +160,8 @@ export const translations = {
     investors: {
       title: 'Investor Command Center',
       subtitle: 'Coming soon: portfolio performance, green miles, CO₂ avoided metrics, and comprehensive sustainability reporting.',
+      mission: 'Our Mission',
+      missionDescription: 'At our core we believe that Earth and its biosphere is a life support system for humans and all other creatures. We must avoid abrupt environmental changes to continue to prosper on our planet. The correct technological progress will help transition physical mobility away from fossil fuels (inferior technology) to renewable. We are here to make the transition happen a little bit faster.',
       getNotified: 'Get Notified'
     },
     contact: {
@@ -184,7 +195,8 @@ export const translations = {
       howItWorks: 'Cómo Funciona',
     },
     valueProps: {
-      title: 'Por Qué Elegir Electric Love',
+      title1: 'Por Qué Elegir',
+      title2: 'Electric Love',
       onboard: {
         title: 'Incorporación \n Rápida',
         description: 'Incorporación con IA te permite conducir en menos de 24 horas'
@@ -199,7 +211,9 @@ export const translations = {
       }
     },
     howItWorks: {
-      title: 'Cómo Funciona',
+      title1: 'Cómo',
+      title2: 'Funciona',
+      subtitle: 'Sigue estos sencillos pasos para comenzar tu viaje con nosotros',
       apply: {
         title: 'Aplicar',
         description: 'Completa nuestra simple aplicación en línea'
@@ -218,7 +232,9 @@ export const translations = {
       }
     },
     impact: {
-      title: 'Nuestro Impacto',
+      title1: 'Nuestro',
+      title2: 'Impacto',
+      subtitle: 'Ve el impacto positivo que estamos haciendo juntos a través del transporte sostenible',
       greenMiles: 'Millas Verdes Conducidas',
       co2Avoided: 'CO₂ Evitado',
       chargingSessions: 'Sesiones de Carga'
@@ -272,6 +288,8 @@ export const translations = {
         joinThousandsOfDrivers: 'Únete a miles de conductores ganando más con transporte sostenible'
       },
       features: {
+        title1: 'Por Qué Conducir',
+        title2: 'Con Nosotros',
         ai: {
           title: 'Incorporación \n con IA',
           description: 'Proceso de aplicación inteligente te aprueba más rápido'
@@ -286,6 +304,8 @@ export const translations = {
         }
       },
       benefits: {
+        title1: 'Beneficios',
+        title2: 'Beneficios',
         fastApproval: {
           title: 'Rápido \n Aprobación',
           description: 'Obtén aprobación en menos de 24 horas con nuestro sistema con IA'
@@ -314,6 +334,8 @@ export const translations = {
     investors: {
       title: 'Centro de Comando para Inversores',
       subtitle: 'Próximamente: rendimiento de cartera, millas verdes, métricas de CO₂ evitado, y reportes integrales de sostenibilidad.',
+      mission: 'Nuestra Misión',
+      missionDescription: 'En nuestro núcleo creemos que la Tierra y su biósfera son un sistema de soporte vital para los humanos y todos los demás seres vivos. Debemos evitar cambios abruptos en el medio ambiente para continuar prosperando en nuestro planeta. El progreso tecnológico correcto ayudará a la transición de la movilidad física lejos de los combustibles fósiles (tecnología inferior) a la renovable. Estamos aquí para hacer que la transición suceda un poco más rápido.',
       getNotified: 'Recibir Notificaciones'
     },
     contact: {
