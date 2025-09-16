@@ -103,7 +103,7 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ locale }) => {
               
               {/* Content */}
               <div className="relative z-10">
-                <h3 className="text-2xl font-bold text-white mb-4 leading-tight">
+                <h3 className="text-3xl font-extralight text-white mb-4 leading-tight">
                   {step.title}
                 </h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
