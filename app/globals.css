@@ -128,7 +128,7 @@
   
   /* Layout components */
   .container {
-    @apply  md:max-w-[60rem] lg:max-w-[60rem] xl:max-w-[80rem] 2xl:max-w-[95rem] mx-auto px-4 sm:px-6 lg:px-8;
+    @apply  md:max-w-[60rem] lg:max-w-[60rem] xl:max-w-[80rem] 2xl:max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8;
   }
   
   /* Enhanced card component */

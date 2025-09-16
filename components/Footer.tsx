@@ -20,7 +20,7 @@ const Footer: React.FC<FooterProps> = ({ locale }) => {
       />
 
       {/* Content */}
-      <div className="relative z-10 px-4 lg:px-0 md:max-w-[50rem] lg:max-w-[60rem] xl:max-w-[80rem] 2xl:max-w-[95rem] mx-auto py-12">
+      <div className="relative z-10 px-4 lg:px-0 md:max-w-[50rem] lg:max-w-[60rem] xl:max-w-[80rem] 2xl:max-w-[100rem] mx-auto py-12">
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand Section - Left */}
