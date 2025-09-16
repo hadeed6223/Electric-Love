@@ -77,7 +77,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ locale }) => {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 w-80 h-[500px] bg-white rounded-2xl shadow-2xl border border-gray-100 z-50 flex flex-col animate-slide-up overflow-hidden">
+        <div className="fixed bottom-24 right-6 w-80 h-[300px] lg:h-[400px] xl:h-[500px] bg-white rounded-2xl shadow-2xl border border-gray-100 z-50 flex flex-col animate-slide-up overflow-hidden">
           {/* Header */}
           <div className="bg-white border-b-2 border-gray-300 p-4 rounded-t-2xl relative overflow-hidden">
             {/* Background Pattern */}
