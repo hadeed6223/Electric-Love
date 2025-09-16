@@ -72,7 +72,7 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
         isScrolled ? 'transform translate-y-0' : 'transform -translate-y-full'
       }`}></div>
       
-      <div className="container mx-auto relative z-10 px-3 lg:px-0">
+      <div className="container mx-auto relative z-10 px-3">
         <div className="flex justify-between items-center py-4">
           <Link href={`/${locale}`} className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <div className="w-8 h-8 bg-gradient-to-r from-[#F9F295] via-[#E0AA3E] to-[#BB8A44] rounded-full flex items-center justify-center">
