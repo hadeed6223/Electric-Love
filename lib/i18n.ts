@@ -168,7 +168,13 @@ export const translations = {
       subtitle: 'Portfolio performance, green miles, CO₂ avoided metrics, and comprehensive sustainability reporting.',
       mission: 'Our Mission',
       missionDescription: 'At our core we believe that Earth and its biosphere is a life support system for humans and all other creatures. We must avoid abrupt environmental changes to continue to prosper on our planet. The correct technological progress will help transition physical mobility away from fossil fuels (inferior technology) to renewable. We are here to make the transition happen a little bit faster.',
-      getNotified: 'Get Notified'
+      getNotified: 'Get Notified',
+      getNotifiedSubtitle: 'Be the first to know when our investor dashboard launches',
+      notifyMe: 'Notify Me',
+      notifyMeSubtitle: 'We respect your privacy. Unsubscribe at any time.',
+      emailPlaceholder: 'Enter your email address',
+      emailSuccess: 'You\'re All Set!',
+      emailSuccessSubtitle: 'We\'ll notify you as soon as the investor dashboard is ready.'
     },
     contact: {
       title: 'Get in Touch',
@@ -348,7 +354,13 @@ export const translations = {
       subtitle: 'Rendimiento de cartera, millas verdes, métricas de CO₂ evitado, y reportes integrales de sostenibilidad.',
       mission: 'Nuestra Misión',
       missionDescription: 'En nuestro núcleo creemos que la Tierra y su biósfera son un sistema de soporte vital para los humanos y todos los demás seres vivos. Debemos evitar cambios abruptos en el medio ambiente para continuar prosperando en nuestro planeta. El progreso tecnológico correcto ayudará a la transición de la movilidad física lejos de los combustibles fósiles (tecnología inferior) a la renovable. Estamos aquí para hacer que la transición suceda un poco más rápido.',
-      getNotified: 'Recibir Notificaciones'
+      getNotified: 'Recibir Notificaciones',
+      getNotifiedSubtitle: 'Sé el primero en saber cuando se lance nuestro panel de inversores',
+      notifyMe: 'Notificarme',
+      notifyMeSubtitle: 'Respetamos tu privacidad. Puedes cancelar la suscripción en cualquier momento.',
+      emailPlaceholder: 'Ingresa tu dirección de email',
+      emailSuccess: '¡Estás Todo Listo!',
+      emailSuccessSubtitle: 'Te notificaremos tan pronto como esté listo nuestro panel de inversores.'
     },
     contact: {
       title: 'Contacto',

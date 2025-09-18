@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Leaf } from "lucide-react";
+import { Leaf, X, Mail, Bell } from "lucide-react";
 import Button from "@/components/Button";
 import { Locale, getTranslation } from "@/lib/i18n";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
@@ -12,6 +12,9 @@ interface InvestorsPageProps {
 export default function InvestorsPage({
   params: { locale },
 }: InvestorsPageProps) {
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const [email, setEmail] = React.useState('');
+  const [isSubmitted, setIsSubmitted] = React.useState(false);
   const t = getTranslation(locale);
 
   const [text] = useTypewriter({
@@ -21,6 +24,19 @@ export default function InvestorsPage({
     deleteSpeed: 50,
     delaySpeed: 1500, // wait before deleting
   });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email.trim()) {
+      setIsSubmitted(true);
+      console.log('Email submitted:', email);
+      setTimeout(() => {
+        setIsModalOpen(false);
+        setIsSubmitted(false);
+        setEmail('');
+      }, 3000);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-black py-10">
@@ -81,10 +97,103 @@ export default function InvestorsPage({
             text={t.investors.getNotified}
             variant="primary"
             className="mt-6 text-sm"
+            onClick={() => setIsModalOpen(true)}
           />
           {/* </div> */}
         </div>
       </div>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="relative max-w-md w-full">
+            {/* Modal Card */}
+            <div className="group relative rounded-3xl p-8 text-center transition-all duration-500 overflow-hidden">
+              {/* Glass background with blur */}
+              <div className="absolute inset-0 bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20"></div>
+              
+              {/* Glass reflection effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-white/5 to-transparent rounded-3xl"></div>
+              
+              {/* Close button */}
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="absolute top-4 right-4 w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-200 z-20"
+              >
+                <X className="w-4 h-4 text-white" />
+              </button>
+              
+              <div className="relative z-10">
+                {!isSubmitted ? (
+                  <>
+                    {/* Icon */}
+                    <div className="w-16 h-16 bg-[#AF8D2C]/20 rounded-full flex items-center justify-center mx-auto mb-6 border border-[#AF8D2C]/30">
+                      <Bell className="w-8 h-8 text-[#AF8D2C]" />
+                    </div>
+                    
+                    {/* Title */}
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      {t.investors.getNotified}
+                    </h3>
+                    
+                    {/* Subtitle */}
+                    <p className="text-gray-300 mb-6 leading-relaxed">
+                      {t.investors.getNotifiedSubtitle}
+                    </p>
+                    
+                    {/* Form */}
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                      <div className="relative">
+                        <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                        <input
+                          type="email"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          placeholder={t.investors.emailPlaceholder}
+                          className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#AF8D2C] focus:border-transparent backdrop-blur-sm"
+                          required
+                        />
+                      </div>
+                      
+                      <Button
+                        text={t.investors.notifyMe}
+                        variant="primary"
+                        type="submit"
+                        className="w-full"
+                      />
+                    </form>
+                    
+                    {/* Privacy note */}
+                    <p className="text-xs text-gray-400 mt-4">
+                      {t.investors.notifyMeSubtitle}
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    {/* Success state */}
+                    <div className="w-16 h-16 bg-[#AF8D2C]/20 rounded-full flex items-center justify-center mx-auto mb-6 border border-[#AF8D2C]/80">
+                      <Bell className="w-8 h-8 text-[#AF8D2C]" />
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      {t.investors.emailSuccess}
+                    </h3>
+                    
+                    <p className="text-gray-300 leading-relaxed">
+                      {t.investors.emailSuccessSubtitle}
+                    </p>
+                  </>
+                )}
+              </div>
+              
+              {/* Floating particles effect */}
+              <div className="absolute top-4 left-4 w-2 h-2 bg-[#AF8D2C] rounded-full opacity-60"></div>
+              <div className="absolute bottom-6 right-6 w-1 h-1 bg-[#F9F295] rounded-full opacity-40"></div>
+              <div className="absolute top-1/2 left-8 w-1.5 h-1.5 bg-[#9DAF89] rounded-full opacity-50"></div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
