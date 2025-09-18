@@ -30,7 +30,7 @@ const Belief: React.FC<BeliefProps> = ({ locale }) => {
       {/* Top border with gradient */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
       
-      <div className="container mx-auto relative z-10">
+      <div className="container mx-auto max-w-[110rem] relative z-10">
         <div className="max-w-[90rem] mx-auto text-center">
           {/* Icon section */}
           <div className="flex justify-center items-center space-x-3 mb-6 animate-fade-in">

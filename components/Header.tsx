@@ -30,12 +30,12 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    const isHomePage = pathname === `/${locale}` || pathname === `/${locale}/`;
-    const isOnboardingPage = pathname.includes('/onboarding');
-    // const isInvestorPage = pathname.includes('/investors');
-    setIsOnWhitePage(isOnboardingPage);
-  }, [pathname, locale]);
+  // useEffect(() => {
+  //   const isHomePage = pathname === `/${locale}` || pathname === `/${locale}/`;
+  //   const isOnboardingPage = pathname.includes('/onboarding');
+  //   // const isInvestorPage = pathname.includes('/investors');
+  //   setIsOnWhitePage(isOnboardingPage);
+  // }, [pathname, locale]);
 
   const toggleLocale = () => {
     const newLocale = locale === 'en' ? 'es' : 'en';
@@ -53,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
 
   const getTextColor = () => {
     if (isScrolled) return 'text-white';
-    if (isOnWhitePage) return 'text-black';
+    // if (isOnWhitePage) return 'text-black';
     return 'text-white text-shadow-outline';
   };
 

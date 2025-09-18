@@ -68,24 +68,46 @@ export default function OnboardingPage({ params: { locale } }: OnboardingPagePro
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-gray-50 py-16">
-        <div className="container mx-auto">
+      <div className="min-h-screen bg-black py-24">
+        <div className="container mx-auto mt-20">
           <div className="max-w-2xl mx-auto">
-            <div className="card text-center">
-              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CheckCircle className="w-12 h-12 text-green-500" />
+            <div className="group relative rounded-3xl p-8 text-left transition-all duration-500 hover:scale-105 hover:-translate-y-2 overflow-hidden glass-card">
+              {/* Glass background with blur */}
+              <div className="absolute inset-0 bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20"></div>
+              
+              {/* Glass reflection effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-white/5 to-transparent rounded-3xl"></div>
+              
+              {/* Animated border glow */}
+              <div className="absolute inset-0 rounded-3xl opacity-0 transition-opacity duration-500 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+              
+              {/* Inner glow on hover */}
+              <div className="absolute inset-2 rounded-3xl bg-gradient-to-br from-white/10 to-white/5 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+
+              <div className="relative z-10 text-center">
+                <div className="w-20 h-20 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6 border border-white/30">
+                  <CheckCircle className="w-12 h-12 text-[#AF8D2C]" />
+                </div>
+                <h1 className="text-4xl font-extralight text-white mb-4">
+                  {t.onboarding.confirmation.title}
+                </h1>
+                <p className="text-gray-400 mb-8 leading-relaxed">
+                  {t.onboarding.confirmation.message}
+                </p>
+                <Button
+                  text={t.onboarding.confirmation.cta}
+                  variant="primary"
+                  onClick={() => router.push(`/${locale}`)}
+                />
               </div>
-              <h1 className="text-3xl font-bold text-secondary mb-4">
-                {t.onboarding.confirmation.title}
-              </h1>
-              <p className="text-gray-600 mb-8 leading-relaxed">
-                {t.onboarding.confirmation.message}
-              </p>
-              <Button
-                text={t.onboarding.confirmation.cta}
-                variant="primary"
-                onClick={() => router.push(`/${locale}`)}
-              />
+
+              {/* Floating particles effect */}
+              <div className="absolute top-4 right-4 w-2 h-2 bg-[#AF8D2C] rounded-full opacity-60"></div>
+              <div className="absolute bottom-6 left-6 w-1 h-1 bg-[#F9F295] rounded-full opacity-40"></div>
+              <div className="absolute top-1/2 right-8 w-1.5 h-1.5 bg-[#9DAF89] rounded-full opacity-50"></div>
+              
+              {/* Bottom highlight line */}
+              <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#AF8D2C]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
           </div>
         </div>
@@ -94,12 +116,12 @@ export default function OnboardingPage({ params: { locale } }: OnboardingPagePro
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
+    <div className="min-h-screen bg-black py-16">
       <div className="container mx-auto mt-10">
         <div className="max-w-2xl mx-auto">
           {/* Header */}
           <div className="text-center mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-[#AF8D2C] mb-4">
               {t.onboarding.title}
             </h1>
             
@@ -114,7 +136,7 @@ export default function OnboardingPage({ params: { locale } }: OnboardingPagePro
                   }`}>
                     {step.number}
                   </div>
-                  <span className="ml-2 text-sm font-medium text-gray-600">
+                  <span className="ml-2 text-sm font-medium text-gray-400">
                     {step.title}
                   </span>
                   {step.number < steps.length && (
@@ -142,7 +164,7 @@ export default function OnboardingPage({ params: { locale } }: OnboardingPagePro
                     type="text"
                     value={formData.name}
                     onChange={(e) => handleInputChange('name', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
                     placeholder="John Doe"
                   />
                 </div>
@@ -155,7 +177,7 @@ export default function OnboardingPage({ params: { locale } }: OnboardingPagePro
                     type="email"
                     value={formData.email}
                     onChange={(e) => handleInputChange('email', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -168,7 +190,7 @@ export default function OnboardingPage({ params: { locale } }: OnboardingPagePro
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => handleInputChange('phone', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
                     placeholder="+1 (555) 123-4567"
                   />
                 </div>
@@ -181,7 +203,7 @@ export default function OnboardingPage({ params: { locale } }: OnboardingPagePro
                     type="text"
                     value={formData.license}
                     onChange={(e) => handleInputChange('license', e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
                     placeholder="D123456789"
                   />
                 </div>
@@ -210,8 +232,7 @@ export default function OnboardingPage({ params: { locale } }: OnboardingPagePro
                       id="dl-front"
                     />
                     <label htmlFor="dl-front" className="cursor-pointer">
-                      <span className="text-primary font-medium">Click to upload</span>
-                      <span className="text-gray-600"> or drag and drop</span>
+                      <span className="text-primary font-medium">{t.onboarding.clickToUpload}</span>
                     </label>
                     {formData.dlFront && (
                       <p className="text-sm text-green-600 mt-2">
@@ -236,8 +257,7 @@ export default function OnboardingPage({ params: { locale } }: OnboardingPagePro
                       id="dl-back"
                     />
                     <label htmlFor="dl-back" className="cursor-pointer">
-                      <span className="text-primary font-medium">Click to upload</span>
-                      <span className="text-gray-600"> or drag and drop</span>
+                      <span className="text-primary font-medium">{t.onboarding.clickToUpload}</span>
                     </label>
                     {formData.dlBack && (
                       <p className="text-sm text-green-600 mt-2">
@@ -262,8 +282,7 @@ export default function OnboardingPage({ params: { locale } }: OnboardingPagePro
                       id="insurance"
                     />
                     <label htmlFor="insurance" className="cursor-pointer">
-                      <span className="text-primary font-medium">Click to upload</span>
-                      <span className="text-gray-600"> or drag and drop</span>
+                      <span className="text-primary font-medium">{t.onboarding.clickToUpload}</span>
                     </label>
                     {formData.insurance && (
                       <p className="text-sm text-green-600 mt-2">
@@ -303,16 +322,16 @@ export default function OnboardingPage({ params: { locale } }: OnboardingPagePro
                   </div>
                   
                   <div className="border-t pt-4">
-                    <p className="text-sm font-medium text-gray-500 mb-2">Documents Uploaded:</p>
+                    <p className="text-sm font-medium text-gray-500 mb-2">{t.onboarding.documentsUploaded}</p>
                     <div className="space-y-1">
                       {formData.dlFront && (
-                        <p className="text-sm text-green-600">✓ Driver License (Front)</p>
+                        <p className="text-sm text-gray-500"> <span className="text-[#9DAF89]">✓</span> {t.onboarding.driverLicenseFront}</p>
                       )}
                       {formData.dlBack && (
-                        <p className="text-sm text-green-600">✓ Driver License (Back)</p>
+                        <p className="text-sm text-gray-500"> <span className="text-[#9DAF89]">✓</span> {t.onboarding.driverLicenseBack}</p>
                       )}
                       {formData.insurance && (
-                        <p className="text-sm text-green-600">✓ Insurance Document</p>
+                        <p className="text-sm text-gray-500"> <span className="text-[#9DAF89]">✓</span> {t.onboarding.insuranceDocument}</p>
                       )}
                     </div>
                   </div>
@@ -327,7 +346,7 @@ export default function OnboardingPage({ params: { locale } }: OnboardingPagePro
                 variant="ghost"
                 onClick={prevStep}
                 disabled={currentStep === 1}
-                className="flex items-center space-x-2 h-10"
+                className="flex items-center space-x-2 h-10 text-black hover:bg-gray-200"
               >
                 <ArrowLeft className="w-4 h-4" />
                 <span>{t.onboarding.back}</span>

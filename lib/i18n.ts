@@ -93,9 +93,14 @@ export const translations = {
       frontDL: 'Driver License (Front)',
       backDL: 'Driver License (Back)',
       insurance: 'Insurance Document',
+      clickToUpload: 'Click to upload',
       submit: 'Complete Application',
       next: 'Next',
       back: 'Back',
+      documentsUploaded: 'Documents Uploaded:',
+      driverLicenseFront: 'Driver License (Front)',
+      driverLicenseBack: 'Driver License (Back)',
+      insuranceDocument: 'Insurance Document',
       confirmation: {
         title: 'Application Submitted!',
         message: 'Thank you for applying. We\'ll review your application and get back to you within 24 hours.',
@@ -159,7 +164,8 @@ export const translations = {
     },
     investors: {
       title: 'Investor Command Center',
-      subtitle: 'Coming soon: portfolio performance, green miles, CO₂ avoided metrics, and comprehensive sustainability reporting.',
+      comingSoon: 'Coming Soon',
+      subtitle: 'Portfolio performance, green miles, CO₂ avoided metrics, and comprehensive sustainability reporting.',
       mission: 'Our Mission',
       missionDescription: 'At our core we believe that Earth and its biosphere is a life support system for humans and all other creatures. We must avoid abrupt environmental changes to continue to prosper on our planet. The correct technological progress will help transition physical mobility away from fossil fuels (inferior technology) to renewable. We are here to make the transition happen a little bit faster.',
       getNotified: 'Get Notified'
@@ -267,9 +273,14 @@ export const translations = {
       frontDL: 'Licencia de Conducir (Frente)',
       backDL: 'Licencia de Conducir (Atrás)',
       insurance: 'Documento de Seguro',
+      clickToUpload: 'Hacer clic para subir',
       submit: 'Completar Aplicación',
       next: 'Siguiente',
       back: 'Atrás',
+      documentsUploaded: 'Documentos Subidos:',
+      driverLicenseFront: 'Licencia de Conducir (Frente)',
+      driverLicenseBack: 'Licencia de Conducir (Atrás)',
+      insuranceDocument: 'Documento de Seguro',
       confirmation: {
         title: '¡Aplicación Enviada!',
         message: 'Gracias por aplicar. Revisaremos tu aplicación y te contactaremos dentro de 24 horas.',
@@ -333,7 +344,8 @@ export const translations = {
     },
     investors: {
       title: 'Centro de Comando para Inversores',
-      subtitle: 'Próximamente: rendimiento de cartera, millas verdes, métricas de CO₂ evitado, y reportes integrales de sostenibilidad.',
+      comingSoon: 'Próximamente',
+      subtitle: 'Rendimiento de cartera, millas verdes, métricas de CO₂ evitado, y reportes integrales de sostenibilidad.',
       mission: 'Nuestra Misión',
       missionDescription: 'En nuestro núcleo creemos que la Tierra y su biósfera son un sistema de soporte vital para los humanos y todos los demás seres vivos. Debemos evitar cambios abruptos en el medio ambiente para continuar prosperando en nuestro planeta. El progreso tecnológico correcto ayudará a la transición de la movilidad física lejos de los combustibles fósiles (tecnología inferior) a la renovable. Estamos aquí para hacer que la transición suceda un poco más rápido.',
       getNotified: 'Recibir Notificaciones'
